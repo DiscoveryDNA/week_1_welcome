@@ -30,7 +30,7 @@ All slides presented are in `week_1_slides.pdf`.
 
 - Email your team preference
 - Give me your github username
-- In the folder `fasta_exercise`. Make a program that reads in the `pdm2_neurogenic.fa` and performs one or all of the tasks mentioned below. You can perform in R or Python. When you have a working script, please up load into the 'fasta_exercise' directory.
+- In the folder `fasta_exercise`. Make a program that reads in the `pdm2_neurogenic.fa` and performs one or all of the tasks mentioned below. You can perform in R or Python. When you have a working script, please up load into the `fasta_exercise` directory. Please fork repo and make pull request to add.
 
 Program Tasks:
 
