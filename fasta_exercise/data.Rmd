@@ -1,0 +1,75 @@
+---
+title: "seq"
+author: "Gracie Yao"
+date: "March 6, 2018"
+output: html_document
+---
+```{r}
+library(seqinr)
+F1<-read.fasta("VT0002.fa")
+F2<-read.fasta("VT0003.fa")
+F3<-read.fasta("VT0004.fa")
+F4<-read.fasta("VT0005.fa")
+F5<-read.fasta("VT0006.fa")
+F6<-read.fasta("VT0007.fa")
+F7<-read.fasta("VT0008.fa")
+F8<-read.fasta("VT0009.fa")
+F9<-read.fasta("VT0010.fa")
+F10<-read.fasta("VT0011.fa")
+F11<-read.fasta("VT0013.fa")
+F12<-read.fasta("VT0015.fa")
+F13<-read.fasta("VT0016.fa")
+F14<-read.fasta("VT0017.fa")
+F15<-read.fasta("VT0018.fa")
+F16<-read.fasta("VT0019.fa")
+F17<-read.fasta("VT0020.fa")
+F18<-read.fasta("VT0021.fa")
+F19<-read.fasta("VT0022.fa")
+F20<-read.fasta("VT0025.fa")
+F21<-read.fasta("VT0104.fa")
+F22<-read.fasta("VT0105.fa")
+F23<-read.fasta("VT0106.fa")
+```
+
+```{r}
+library(seqinr)
+install.packages("BioStrings")
+source("https://bioconductor.org/biocLite.R")
+biocLite()
+```
+
+```{r}
+source("http://bioconductor.org/biocLite.R")
+biocLite("Biostrings")
+```
+
+
+```{r}
+library(BioStrings)
+# The following is a function which creates a dataframe with the first col the DNA_ID and the second col DNA  
+# However, the readDNAStringSet function is inside BioStrings package, which I am not able to install  
+fasta2dataframe <- function(fastaFile){
+s <- readDNAStringSet(fastaFile)
+seq_name <- names(s)
+seq_name <- sub(" .*", "", seq_name) # remove all characters after the first space  
+for (i in 1:legnth(s)){
+  seq[i]<-toString(s[i])
+}
+DNA_seq<-data.frame(seq_name, seq)
+return(DNA_seq)
+}
+
+```
+
+```{r}
+# find the GC content; an example
+s <- "ATTGTAACAGAGAAACTAGTTTTTCAATAAAACGCAACCAAGTAAAACCAATGCGGGCGATGTAATACTTATTTTCGTGGCTGTTTCGAAATGGAAATATTTGTAC"
+G <- "G"
+C <- "C"
+s2 <- gsub(G, "", s)
+s2 <- gsub(C, "", s)
+numOcc <- nchar(s) - nchar(s2)
+numOcc/nchar(s)
+```
+
+
