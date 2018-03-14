@@ -1,3 +1,14 @@
+# Week 2: Teams
+
+## Meeting Notes
+
+Please see `week_2_slides`.
+
+1.  Team Assignments
+2.  Team Dynamics
+3.  Project Organization
+4.  Exercise Discussion
+
 # Week 1: Welcome!
 
 ## Meeting Notes
